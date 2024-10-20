@@ -1,9 +1,7 @@
 import { useState } from "react";
 
 const Bookself = () => {
-  const [book, setbooks] = useState([]);
-
-  const [newBook, setNewBook] = useState(
+  const [book, setbooks] = useState([
     {
       title: "Shadow Spinner",
       author: "Susan Fletcher",
@@ -11,6 +9,13 @@ const Bookself = () => {
     {
       title: "The Otherworldlies",
       author: "Jennifer Anne Kogler",
+    }
+  ]);
+
+  const [newBook, setNewBook] = useState(
+    {
+      title: "",
+      author: "",
     }
   );
 
@@ -69,3 +74,4 @@ const Bookself = () => {
   );
 }
   
+export default Bookself;
