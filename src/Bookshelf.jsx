@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const Bookself = () => {
-  const [book, setbooks] = useState([
+const Bookshelf = () => {
+  const [books, setBooks] = useState([
     {
       title: "Shadow Spinner",
       author: "Susan Fletcher",
@@ -28,7 +28,7 @@ const Bookself = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setbook([...Bookself, newBook]);
+    setBooks([...books, newBook]);
     setNewBook({
       title: "",
       author: "",
@@ -62,7 +62,7 @@ const Bookself = () => {
           </form>
        </div>
          <div className="bookCardDiv">
-            {book.map((book, index) => (
+            {books.map((book, index) => (
               <div key={index} className="bookCard">
                 <h3>{book.title}</h3>
                 <p>by {book.author}</p>
@@ -74,4 +74,4 @@ const Bookself = () => {
   );
 }
   
-export default Bookself;
+export default Bookshelf;
