@@ -14,6 +14,15 @@ const Bookself = () => {
     }
   );
 
+  const handlInputChange = (event) => {
+    setNewBook({
+      ...newBook,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  
+
   return (
 
 <div className="bookshelfDiv">
