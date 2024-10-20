@@ -21,7 +21,14 @@ const Bookself = () => {
     });
   };
 
-  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setbook([...Bookself, newBook]);
+    setNewBook({
+      title: "",
+      author: "",
+    });
+  };
 
   return (
 
